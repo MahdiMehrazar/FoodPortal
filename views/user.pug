@@ -1,0 +1,12 @@
+extends layout
+
+block layout-content
+  div.View.UserView
+    h1.Banner Hey, #{userProfile.nickname}!
+    div.Message
+      div.TitleProfile
+        h1 Profile
+      pre.Details=JSON.stringify(userProfile, null, 2)
+    div.NavButtons
+      a(href="/logout")
+        div.NavButton Log out
