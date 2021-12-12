@@ -7,5 +7,9 @@ block layout-content
       div.Title
         h3 Food for thought.
     div.NavButtons
-      a(href="/user")
-          div.NavButton Log In
+      if isAuthenticated
+        a(href="/user")
+          div.NavButton User profile
+      else
+        a(href="/login")
+          div.NavButton Log in
